@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>笔记</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+</head>
+
+<body>
+    <div id="tag-left">
+        <div class="title"><p>笔记本</p></div>
+        <ul>
+            <li id="active">设计</li>
+            <li>breaking</li>
+            <li>健美</li>
+            <li>剪辑</li>
+            <li>前端</li>
+            <li>php</li>
+            <li>安卓</li>
+            <li>交互</li>
+        </ul>
+    </div>
+    <div id="note-list">
+        <div class="title"><p>笔记</p><a href="">新建笔记</a></div>
+        <ul>
+            <li>
+                <h2>文字排版与字体排版</h2>
+                <p>目前，文字排版的方法有铅活字排版、手动照排、计算机排版等三种。文字排版技巧：文字是人类文化的重要组成部分。无论在何种视觉媒体中，文字和图片都是其两大构成要素。文字排列组合的好坏，直接影响着版面的视觉传达效果。因此，文字设计是增强视觉传达效果，提高作品的诉求力，赋予版面审美价值的一种重要构成技术。 在这里，我们主要谈谈在平面设计中文字设计的几条原则，以及文字组合中应注意的几点。特别提醒一下，这部分工作应该是人脑完成的工作，电脑是无法代替的。</p>
+            </li>
+            <li id="active">
+                <h2>文字排版与字体排版</h2>
+                <p>目前，文字排版的方法有铅活字排版、手动照排、计算机排版等三种。文字排版技巧：文字是人类文化的重要组成部分。无论在何种视觉媒体中，文字和图片都是其两大构成要素。文字排列组合的好坏，直接影响着版面的视觉传达效果。因此，文字设计是增强视觉传达效果，提高作品的诉求力，赋予版面审美价值的一种重要构成技术。 在这里，我们主要谈谈在平面设计中文字设计的几条原则，以及文字组合中应注意的几点。特别提醒一下，这部分工作应该是人脑完成的工作，电脑是无法代替的。</p>
+            </li>
+            <li>
+                <h2>文字排版与字体排版</h2>
+                <p>目前，文字排版的方法有铅活字排版、手动照排、计算机排版等三种。文字排版技巧：文字是人类文化的重要组成部分。无论在何种视觉媒体中，文字和图片都是其两大构成要素。文字排列组合的好坏，直接影响着版面的视觉传达效果。因此，文字设计是增强视觉传达效果，提高作品的诉求力，赋予版面审美价值的一种重要构成技术。 在这里，我们主要谈谈在平面设计中文字设计的几条原则，以及文字组合中应注意的几点。特别提醒一下，这部分工作应该是人脑完成的工作，电脑是无法代替的。</p>
+            </li>
+            <li>
+                <h2>文字排版与字体排版</h2>
+                <p>目前，文字排版的方法有铅活字排版、手动照排、计算机排版等三种。文字排版技巧：文字是人类文化的重要组成部分。无论在何种视觉媒体中，文字和图片都是其两大构成要素。文字排列组合的好坏，直接影响着版面的视觉传达效果。因此，文字设计是增强视觉传达效果，提高作品的诉求力，赋予版面审美价值的一种重要构成技术。 在这里，我们主要谈谈在平面设计中文字设计的几条原则，以及文字组合中应注意的几点。特别提醒一下，这部分工作应该是人脑完成的工作，电脑是无法代替的。</p>
+            </li>
+            <li>
+                <h2>文字排版与字体排版</h2>
+                <p>目前，文字排版的方法有铅活字排版、手动照排、计算机排版等三种。文字排版技巧：文字是人类文化的重要组成部分。无论在何种视觉媒体中，文字和图片都是其两大构成要素。文字排列组合的好坏，直接影响着版面的视觉传达效果。因此，文字设计是增强视觉传达效果，提高作品的诉求力，赋予版面审美价值的一种重要构成技术。 在这里，我们主要谈谈在平面设计中文字设计的几条原则，以及文字组合中应注意的几点。特别提醒一下，这部分工作应该是人脑完成的工作，电脑是无法代替的。</p>
+            </li>
+        </ul>
+    </div>
+    <div id="note-container">
+        <div class="title">
+            <p>用户关注中心点径向响应</p>
+            <input type="text" placeholder="在此输入标题">
+            <a id="close" href=""></a>
+            <a href="" id="enter">确定</a>
+            <a href="" id="edit">编辑</a>
+        </div>
+        <div id="note-main">
+            <textarea id="text-input" oninput="this.editor.update()" rows="6" cols="60"></textarea>
+            <article id="preview"></article>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="js/markdown.js"></script>
+    <script>
+      function Editor(input, preview) {
+        this.update = function () {
+          preview.innerHTML = markdown.toHTML(input.value);
+      };
+      input.editor = this;
+      this.update();
+  }
+  var $ = function (id) { return document.getElementById(id); };
+  new Editor($("text-input"), $("preview"));
+</script>
+</body>
+</html>
